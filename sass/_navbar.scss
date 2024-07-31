@@ -1,0 +1,40 @@
+.navbar{
+  
+    &-title{
+font-size:clamp(2.5rem, 3vw, 2.6rem);
+
+    }
+    & .list{
+      
+        .close{
+            position: absolute;
+            top: 3rem;
+            right: 2rem;
+        }
+    }
+
+}
+@media screen and (max-width: 48em) {
+    .ham{
+        display: block;
+    }
+    .close{
+        display: block;
+    }
+    .list{
+        position: fixed;
+        top: 0;;
+        background-color: white;
+        width: 100%;
+        display: flex;
+    height: 100%;
+    left: -1000%;
+        z-index: 1;
+        transition: all 1s ease-in-out;
+        flex-direction: column;
+    gap: 0rem;
+    }
+  .active{
+    left: 0;
+  } 
+}
